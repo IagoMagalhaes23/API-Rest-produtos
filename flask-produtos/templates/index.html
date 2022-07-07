@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <a class="stretched-link" href="{{ url_for('post', post_id=post['id']) }}">
+            <h1 class="text-dark">{{ post['title'] }}</h1>
+        </a>
+        <span class="badge badge-dark">{{ post['created'] }}</span>
+        <p>{{ post['content'] }}</p>
+        <a href="{{ url_for('edit', id=post['id']) }}">
+            <span class="badge badge-info"> Editar </span>
+        </a>
+        <hr>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+h2 {
+    border: 2px #eee solid;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.text-dark {
+    color: black;
+    text-decoration: none;
+}
